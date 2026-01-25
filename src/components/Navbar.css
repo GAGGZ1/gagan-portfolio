@@ -1,0 +1,48 @@
+.apple-menu {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  min-width: 200px;
+  cursor: pointer;
+  font-family: inherit;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--navbar-bg);
+  backdrop-filter: var(--navbar-blur);
+  -webkit-backdrop-filter: var(--navbar-blur);
+
+  border-radius: var(--navbar-radius);
+  padding: 4px 0;
+
+  color: var(--navbar-text);
+  font-size: var(--navbar-font-size);
+
+  box-shadow: var(--navbar-shadow);
+  z-index: 9999;
+  font-weight: 500;
+
+  -webkit-font-smoothing: antialiased;
+}
+.apple-menu li {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 0px 15px;
+  min-height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.apple-menu li:hover {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  border-radius: 6px;
+}
