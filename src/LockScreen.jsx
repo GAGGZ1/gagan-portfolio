@@ -27,7 +27,7 @@ export default function LockScreen({ onUnlock }) {
       </div>
 
       <div className="lock-bottom">
-        <img src="/profile.jpg" alt="Profile" className="profile-pic" />
+        <img src={`${import.meta.env.BASE_URL}profile.jpg`} className="profile-pic" />
         <div className="profile-name">Gagan Chauhan</div>
         <div className="unlock-hint">
           Click anywhere or press any key to unlock
