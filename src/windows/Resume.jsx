@@ -7,7 +7,7 @@ import "react-pdf/dist/Page/TextLayer.css";
 import { pdfjs } from "react-pdf";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
-const PDF_URL = `${import.meta.env.BASE_URL}files/resume.pdf`;
+const PDF_URL = `${import.meta.env.BASE_URL}files/Gagan_Chauhan_Resume.pdf`;
 const Resume = () => {
   return (
     <>

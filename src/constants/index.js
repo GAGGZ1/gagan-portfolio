@@ -79,25 +79,25 @@ const dockApps = [
 const blogPosts = [
   {
     id: 1,
-    date: "Sep 2, 2025",
+    date: "Jan 20, 2026",
     title:
-      "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
-    image: `${BASE}images/blog1.png`,
-    link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
+      "Git Isn’t Guessing — It’s Running an Algorithm on Your Typos",
+    image: `${BASE}images/blog-2.png`,
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7419091326526271488/",
   },
   {
     id: 2,
-    date: "Aug 28, 2025",
-    title: "The Ultimate Guide to Mastering Three.js for 3D Development",
-    image: `${BASE}images/blog2.png`,
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
+    date: "Nov 13, 2025",
+    title: "Inside the Browser: How Downloads, Temp Files, and Resume Really Work",
+    image: `${BASE}images/blog-4.png`,
+    link: "https://medium.com/@chauhangagan117/inside-the-browser-how-downloads-temp-files-and-resume-really-work-27b2e20b5c9d",
   },
   {
     id: 3,
-    date: "Aug 15, 2025",
-    title: "The Ultimate Guide to Mastering GSAP Animations",
-    image: `${BASE}images/blog3.png`,
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
+    date: "Aug 23, 2025",
+    title: "🏆 Master Prefix Sum + HashMap in 7 Days — A Simple Practice Plan",
+    image: `${BASE}images/blog-5.png`,
+    link: "https://medium.com/@chauhangagan117/master-prefix-sum-hashmap-in-7-days-a-simple-practice-plan-5cd22e5d0458",
   },
 ];
 
@@ -133,30 +133,33 @@ const socials = [
     id: 1,
     text: "Github",
     icon: `${BASE}icons/github.svg`,
-    bg: "#f4656b",
-    link: "https://github.com/JavaScript-Mastery-Pro",
+    bg: "#24292e",
+    link: "https://github.com/GAGGZ1",
   },
-  {
+    {
     id: 2,
-    text: "Platform",
-    icon: `${BASE}icons/atom.svg`,
-    bg: "#4bcb63",
-    link: "https://jsmastery.com/",
+    text: "LinkedIn",
+    icon: `${BASE}icons/linkedin.svg`,
+    bg: "#0a66c2",
+    link: "https://www.linkedin.com/in/gaganchauhan/",
   },
+
   {
     id: 3,
     text: "Twitter/X",
     icon: `${BASE}icons/twitter.svg`,
-    bg: "#ff866b",
-    link: "https://x.com/jsmasterypro",
+    bg: "#1d9bf0",
+    link: "https://x.com/CHAUHAN702",
   },
+
   {
-    id: 4,
-    text: "LinkedIn",
-    icon: `${BASE}icons/linkedin.svg`,
-    bg: "#05b6f6",
-    link: "https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all",
-  },
+  id: 4,
+  text: "Instagram",
+  icon: `${BASE}icons/instagram-5.png`,
+  bg: "#ec0075",
+  link: "https://www.instagram.com/9agan/",
+},
+
 ];
 
 const photosLinks = [
@@ -190,19 +193,19 @@ const photosLinks = [
 const gallery = [
   {
     id: 1,
-    img: `${BASE}images/gal1.png`,
+    img: `${BASE}images/gal-5.jpeg`,
   },
   {
     id: 2,
-    img: `${BASE}images/gal2.png`,
+    img: `${BASE}images/gal-1.jpeg`,
   },
   {
     id: 3,
-    img: `${BASE}images/gal3.png`,
+    img: `${BASE}images/gal4.jpeg`,
   },
   {
     id: 4,
-    img: `${BASE}images/gal4.png`,
+    img: `${BASE}images/gal-4.jpeg`,
   },
 ];
 
@@ -400,7 +403,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-10 left-5",
-      imageUrl: `${BASE}images/adrian.jpg`,
+      imageUrl: `${BASE}images/profile.jpeg`,
     },
     {
       id: 2,
@@ -409,16 +412,16 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-28 right-72",
-      imageUrl: `${BASE}images/adrian-2.jpg`,
+      imageUrl: `${BASE}images/gagan-3.jpeg`,
     },
     {
       id: 3,
-      name: "conference-me.png",
+      name: "currently-me.png",
       icon: `${BASE}images/image.png`,
       kind: "file",
       fileType: "img",
       position: "top-52 left-80",
-      imageUrl: `${BASE}images/adrian-3.jpeg`,
+      imageUrl: `${BASE}images/gagan-4.jpeg`,
     },
     {
       id: 4,
@@ -470,7 +473,7 @@ const TRASH_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-10 left-10",
-      imageUrl: `${BASE}images/trash-1.png`,
+      imageUrl: `${BASE}images/trash-3.png`,
     },
     {
       id: 2,
@@ -479,7 +482,7 @@ const TRASH_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-40 left-80",
-      imageUrl: `${BASE}images/trash-2.png`,
+      imageUrl: `${BASE}images/trash-4.png`,
     },
   ],
 };

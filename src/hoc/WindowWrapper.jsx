@@ -27,23 +27,38 @@ const WindowWrapper = (Component, windowKey) => {
       );
     }, [isOpen]);
 
+// useGSAP(() => {
+//   const el = ref.current;
+//   if (!el) return;
+
+//   const header = el.querySelector("#window-header");
+//   if (!header) return;
+
+//   const [instance] = Draggable.create(el, {
+//     trigger: header,             
+//     dragClickables: true,
+//     allowNativeTouchEvents: true,
+//     preventDefault: false,
+//     onPress: () => focusWindow(windowKey),
+//   });
+
+//   return () => instance.kill();
+// }, []);
+
+
 useGSAP(() => {
   const el = ref.current;
   if (!el) return;
 
-  const header = el.querySelector("#window-header");
-  if (!header) return;
-
   const [instance] = Draggable.create(el, {
-    trigger: header,                 // ✅ ONLY header drags
-    dragClickables: true,
-    allowNativeTouchEvents: true,
-    preventDefault: false,
+    trigger: el.querySelector("#window-header"),
+    cancel: "button, input, textarea, select",
     onPress: () => focusWindow(windowKey),
   });
 
   return () => instance.kill();
 }, []);
+
 
 
     useLayoutEffect(() => {
