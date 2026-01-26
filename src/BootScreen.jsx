@@ -21,7 +21,11 @@ export default function BootScreen({ onFinish }) {
 
   return (
     <div className={`boot-screen ${fadeOut ? "fade-out" : ""}`}>
-      <img src="/apple-logo.png" className="apple-logo" />
+    <img
+        src={`${import.meta.env.BASE_URL}apple-logo.png`}
+        className="apple-logo"
+        alt="Apple logo"
+      />
       <div className="loading-bar">
         <div className="loading-progress" />
       </div>
