@@ -7,11 +7,10 @@ import useWindowStore from "#store/window";
 import { locations } from "#constants";
 import useLocationStore from "#store/location";
 
-
 gsap.registerPlugin(useGSAP);
 
 const Dock = () => {
-  const setActiveLocation = useLocationStore(s => s.setActiveLocation);
+  const setActiveLocation = useLocationStore((s) => s.setActiveLocation);
 
   const openWindow = useWindowStore((s) => s.openWindow);
   const closeWindow = useWindowStore((s) => s.closeWindow);
@@ -69,9 +68,9 @@ const Dock = () => {
 
   const toggleApp = ({ id }) => {
     if (id === "trash") {
-    setActiveLocation(locations.trash);
-    return openWindow("finder");
-  }
+      setActiveLocation(locations.trash);
+      return openWindow("finder");
+    }
     const win = windows[id];
     if (!win) return;
 
@@ -94,7 +93,11 @@ const Dock = () => {
               disabled={!canOpen}
               onClick={() => canOpen && toggleApp({ id, canOpen })}
             >
-              <img src={`/images/${icon}`} alt={name} loading="lazy" />
+              <img
+                src={`${import.meta.env.BASE_URL}images/${icon}`}
+                alt={name}
+                loading="lazy"
+              />
             </button>
           </div>
         ))}
