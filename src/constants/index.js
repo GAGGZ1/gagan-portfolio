@@ -251,7 +251,7 @@ const WORK_LOCATION = {
         {
           id: 2,
           name: "nike.com",
-          icon: `${BASE}mages/safari.png`,
+          icon: `${BASE}images/safari.png`,
           kind: "file",
           fileType: "url",
           href: "https://youtu.be/fZdTYswuZjU?si=Awjl-pIst9e09_UU",
