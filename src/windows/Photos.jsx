@@ -37,7 +37,7 @@ const Photos = () => {
                   openWindow("imgfile", {
                     id,
                     name: "Gallery image",
-                    icon: "/images/image.png",
+                    icon: `${import.meta.env.BASE_URL}images/image.png `,
                     kind: "file",
                     fileType: "img",
                     imageUrl: img,

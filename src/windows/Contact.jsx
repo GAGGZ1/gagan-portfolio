@@ -12,7 +12,7 @@ const Contact = () => {
 
       <div className="p-5 space-y-5 overflow-y-auto">
         <img
-          src="/images/adrian.jpg"
+          src={`${import.meta.env.BASE_URL}images/adrian.jpg`}
           alt="Adrian"
           className="w-20 rounded-full"
         />

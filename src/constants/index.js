@@ -139,7 +139,7 @@ const socials = [
   {
     id: 2,
     text: "Platform",
-    icon:`${BASE}icons/atom.svg`,
+    icon: `${BASE}icons/atom.svg`,
     bg: "#4bcb63",
     link: "https://jsmastery.com/",
   },
@@ -221,7 +221,7 @@ const WORK_LOCATION = {
   id: 1,
   type: "work",
   name: "Work",
-  icon:`${BASE}icons/work.svg`,
+  icon: `${BASE}icons/work.svg`,
   kind: "folder",
   children: [
     // ▶ Project 1

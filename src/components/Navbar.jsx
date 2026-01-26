@@ -33,7 +33,11 @@ const Navbar = () => {
             onClick={() => setAppleMenuOpen((v) => !v)}
             className="apple-button"
           >
-            <img src="/images/logo.svg" alt="Apple" className="w-5 h-5" />
+            <img
+              src={`${import.meta.env.BASE_URL}images/logo.svg`}
+              alt="Apple"
+              className="w-5 h-5"
+            />
           </button>
 
           {appleMenuOpen && (
