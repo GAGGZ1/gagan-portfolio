@@ -93,11 +93,7 @@ const Dock = () => {
               disabled={!canOpen}
               onClick={() => canOpen && toggleApp({ id, canOpen })}
             >
-              <img
-                src={`${import.meta.env.BASE_URL}images/${icon}`}
-                alt={name}
-                loading="lazy"
-              />
+              <img src={icon} alt={name} loading="lazy" />
             </button>
           </div>
         ))}
