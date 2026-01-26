@@ -7,7 +7,7 @@ import "react-pdf/dist/Page/TextLayer.css";
 import { pdfjs } from "react-pdf";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
-
+const PDF_URL = `${import.meta.env.BASE_URL}files/resume.pdf`;
 const Resume = () => {
   return (
     <>
@@ -15,7 +15,7 @@ const Resume = () => {
         <WindowControls target="resume" />
         <h2>Resume.pdf</h2>
         <a
-          href="/files/resume.pdf"
+          href={PDF_URL}
           download
           className="cursor-pointer"
           title="Download resume"
