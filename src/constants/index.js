@@ -243,11 +243,12 @@ const WORK_LOCATION = {
       kind: "folder",
       experience: {
         description: [
-          "Automated end-to-end testing using Cypress, Playwright, and TypeScript, increasing overall test coverage by 85%.",
-          "Developed scalable web applications using Java, JavaScript, and TypeScript.",
-          "Optimized CI/CD pipelines with Jenkins and AWS, reducing deployment time by 60%.",
-          "Worked in an Agile environment using Jira, Confluence, and Bitbucket for project tracking, documentation, and version control.",
+          "Automated end-to-end UI test suites using Cypress and Playwright with TypeScript, improving overall test coverage by 85% and reducing regression effort.",
+          "Identified and resolved flaky test cases by stabilizing selectors, improving waits, and optimizing test logic, leading to more reliable CI test runs.",
+          "Performed thorough manual UI testing to validate new features, edge cases, and production bug fixes before automation coverage.",
+          "Collaborated in an Agile development environment using Jira for sprint tracking, Confluence for documentation, and Bitbucket for version control and code reviews.",
         ],
+
         tech: [
           "TypeScript",
           "Java",
