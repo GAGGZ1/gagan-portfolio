@@ -80,15 +80,15 @@ const blogPosts = [
   {
     id: 1,
     date: "Jan 20, 2026",
-    title:
-      "Git Isn’t Guessing — It’s Running an Algorithm on Your Typos",
+    title: "Git Isn’t Guessing — It’s Running an Algorithm on Your Typos",
     image: `${BASE}images/blog-2.png`,
     link: "https://www.linkedin.com/feed/update/urn:li:activity:7419091326526271488/",
   },
   {
     id: 2,
     date: "Nov 13, 2025",
-    title: "Inside the Browser: How Downloads, Temp Files, and Resume Really Work",
+    title:
+      "Inside the Browser: How Downloads, Temp Files, and Resume Really Work",
     image: `${BASE}images/blog-4.png`,
     link: "https://medium.com/@chauhangagan117/inside-the-browser-how-downloads-temp-files-and-resume-really-work-27b2e20b5c9d",
   },
@@ -103,28 +103,36 @@ const blogPosts = [
 
 const techStack = [
   {
-    category: "Frontend",
-    items: ["React.js", "Next.js", "TypeScript"],
+    category: "Programming Languages",
+    items: ["C", "C++", "Java", "Python", "JavaScript", "TypeScript", "SQL"],
   },
   {
-    category: "Mobile",
-    items: ["React Native", "Expo"],
+    category: "Frontend",
+    items: ["HTML5", "CSS3", "React.js", "Redux", "Redux Toolkit"],
   },
   {
     category: "Styling",
-    items: ["Tailwind CSS", "Sass", "CSS"],
+    items: ["Bootstrap", "Tailwind CSS"],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express", "NestJS", "Hono"],
+    items: ["Flask"],
   },
   {
-    category: "Database",
-    items: ["MongoDB", "PostgreSQL"],
+    category: "Databases",
+    items: ["MySQL", "MongoDB"],
   },
   {
-    category: "Dev Tools",
-    items: ["Git", "GitHub", "Docker"],
+    category: "Testing",
+    items: ["Cypress", "Playwright"],
+  },
+  {
+    category: "DevOps & Cloud",
+    items: ["AWS", "Jenkins", "Git", "GitHub", "Bitbucket", "GitHub Copilot"],
+  },
+  {
+    category: "Collaboration",
+    items: ["Jira", "Confluence", "Microsoft 365", "Slack"],
   },
 ];
 
@@ -136,7 +144,7 @@ const socials = [
     bg: "#24292e",
     link: "https://github.com/GAGGZ1",
   },
-    {
+  {
     id: 2,
     text: "LinkedIn",
     icon: `${BASE}icons/linkedin.svg`,
@@ -153,13 +161,12 @@ const socials = [
   },
 
   {
-  id: 4,
-  text: "Instagram",
-  icon: `${BASE}icons/instagram-5.png`,
-  bg: "#ec0075",
-  link: "https://www.instagram.com/9agan/",
-},
-
+    id: 4,
+    text: "Instagram",
+    icon: `${BASE}icons/instagram-5.png`,
+    bg: "#ec0075",
+    link: "https://www.instagram.com/9agan/",
+  },
 ];
 
 const photosLinks = [
@@ -227,162 +234,223 @@ const WORK_LOCATION = {
   icon: `${BASE}icons/work.svg`,
   kind: "folder",
   children: [
-    // ▶ Project 1
     {
-      id: 5,
-      name: "Nike Ecommerce Website Application",
-      icon: `${BASE}images/folder.png`,
-
+      id: "automation-anywhere",
+      name: "Software Engineering Intern",
+      company: "Automation Anywhere",
+      location: "Bengaluru, India",
+      duration: "Jul 2025 – Present",
       kind: "folder",
-      position: "top-10 left-5",
+      experience: {
+        description: [
+          "Automated end-to-end testing using Cypress, Playwright, and TypeScript, increasing overall test coverage by 85%.",
+          "Developed scalable web applications using Java, JavaScript, and TypeScript.",
+          "Optimized CI/CD pipelines with Jenkins and AWS, reducing deployment time by 60%.",
+          "Worked in an Agile environment using Jira, Confluence, and Bitbucket for project tracking, documentation, and version control.",
+        ],
+        tech: [
+          "TypeScript",
+          "Java",
+          "JavaScript",
+          "Cypress",
+          "Playwright",
+          "Jenkins",
+          "AWS",
+          "Jira",
+          "Bitbucket",
+        ],
+      },
+    },
+
+    {
+      id: "gssoc",
+      name: "Open-Source Contributor",
+      company: "GirlScript Summer of Code (GSSoC 2024)",
+      location: "Remote",
+      duration: "Jun 2024 – Aug 2024",
+      kind: "folder",
+      experience: {
+        description: [
+          "Improved API performance by 20% through bug fixes and backend optimizations.",
+          "Enhanced project usability by 30% by leading feature integration and improvements.",
+          "Collaborated with maintainers and contributors using Git-based workflows and code reviews.",
+        ],
+        tech: ["API Development", "Git", "Open Source", "JavaScript"],
+      },
+    },
+
+    {
+      id: "palo-alto",
+      name: "Cybersecurity Virtual Intern",
+      company: "Palo Alto Networks (AICTE – EduSkills)",
+      location: "Remote",
+      duration: "Sep 2023 – Nov 2023",
+      kind: "folder",
+      experience: {
+        description: [
+          "Completed a 10-week cybersecurity internship covering network security fundamentals.",
+          "Learned cloud security concepts and Security Operations Center (SOC) workflows.",
+          "Gained hands-on exposure to real-world security practices and threat analysis.",
+        ],
+        tech: [
+          "Network Security",
+          "Cloud Security",
+          "SOC",
+          "Cybersecurity Fundamentals",
+        ],
+      },
+    },
+  ],
+};
+
+const PROJECTS = {
+  id: 1,
+  type: "projects",
+  name: "Projects",
+  icon: `${BASE}icons/work.svg`,
+  kind: "folder",
+  children: [
+    // ▶ 1. e-Chikitsalaya
+    {
+      id: "1",
+      name: "e-Chikitsalaya",
+      icon: `${BASE}images/folder.png`,
+      kind: "folder",
       windowPosition: "top-[5vh] left-5",
       children: [
         {
           id: 1,
-          name: "Nike Project.txt",
+          name: "Overview.txt",
           icon: `${BASE}images/txt.png`,
           kind: "file",
           fileType: "txt",
-          position: "top-5 left-10",
           description: [
-            "The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.",
-            "Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
-            "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
-            "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
+            "A full-stack telemedicine platform enabling doctor appointment booking, secure payments, and real-time video consultations.",
+            "Built using Python, Flask, MySQL, Stripe, Socket.IO, HTML, CSS, and JavaScript.",
+            "Includes chatbot support, real-time messaging, and dark/light mode for enhanced UX.",
           ],
-        },
-        {
-          id: 2,
-          name: "nike.com",
-          icon: `${BASE}images/safari.png`,
-          kind: "file",
-          fileType: "url",
-          href: "https://youtu.be/fZdTYswuZjU?si=Awjl-pIst9e09_UU",
           position: "top-10 right-20",
         },
         {
-          id: 4,
-          name: "nike.png",
-          icon: `${BASE}images/image.png`,
+          id: 2,
+          name: "GitHub Repo",
+          icon: `${BASE}images/GitHub-Logo.wine.svg`,
           kind: "file",
-          fileType: "img",
-          position: "top-52 right-80",
-          imageUrl: `${BASE}images/project-1.png`,
-        },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: `${BASE}images/plain.png`,
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-          position: "top-60 right-20",
+          fileType: "url",
+          href: "https://github.com/GAGGZ1/Hospital-System-Video-Calling-with-Doctors-",
+          position: "top-5 left-10",
         },
       ],
     },
 
-    // ▶ Project 2
+    // ▶ 2. Travel Story (MERN)
     {
-      id: 6,
-      name: "AI Resume Analyzer",
+      id: "2",
+      name: "Travel Story",
       icon: `${BASE}images/folder.png`,
       kind: "folder",
-      position: "top-52 right-80",
-      windowPosition: "top-[20vh] left-7",
+      windowPosition: "top-[18vh] left-7",
       children: [
         {
           id: 1,
-          name: "AI Resume Analyzer Project.txt",
+          name: "Overview.txt",
           icon: `${BASE}images/txt.png`,
           kind: "file",
           fileType: "txt",
-          position: "top-5 right-10",
           description: [
-            "AI Resume Analyzer is a smart tool that helps you perfect your resume with instant feedback.",
-            "Instead of guessing what recruiters want, you get AI-powered insights on keywords, formatting, and overall impact.",
-            "Think of it like having a career coach—pointing out strengths, fixing weaknesses, and boosting your chances of landing interviews.",
-            "It's built with Next.js and Tailwind, so it runs fast, looks professional, and works seamlessly on any device.",
+            "A personal travel timeline app allowing users to create, edit, delete, and filter stories.",
+            "Built with React, Node.js, Express, and MongoDB.",
+            "Implements JWT authentication, image uploads, and story pinning.",
           ],
+          position: "top-52 right-40",
         },
         {
           id: 2,
-          name: "ai-resume-analyzer.com",
+          name: "Live Demo",
           icon: `${BASE}images/safari.png`,
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/iYOz165wGkQ?si=R1hs8Legl200m0Cl",
-          position: "top-20 left-20",
+          href: "https://travel-story-1-q16j.onrender.com/",
         },
         {
-          id: 4,
-          name: "ai-resume-analyzer.png",
-          icon: `${BASE}images/image.png`,
+          id: 3,
+          name: "GitHub Repo",
+          icon: `${BASE}images/GitHub-Logo.wine.svg`,
           kind: "file",
-          fileType: "img",
-          position: "top-52 left-80",
-          imageUrl: `${BASE}images/project-2.png`,
-        },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: `${BASE}images/plain.png`,
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-          position: "top-60 left-5",
+          fileType: "url",
+          href: "https://github.com/GAGGZ1/Travel-Story",
+          position: "top-50 right-100",
         },
       ],
     },
-
-    // ▶ Project 3
+    // ▶ 3. Flask Blog
     {
-      id: 7,
-      name: "Food Delivery App",
+      id: "3",
+      name: "Flask Blog App",
       icon: `${BASE}images/folder.png`,
       kind: "folder",
-      position: "top-10 left-80",
-      windowPosition: "top-[33vh] left-7",
+      windowPosition: "top-[42vh] left-5",
       children: [
         {
           id: 1,
-          name: "Food Delivery App Project.txt",
+          name: "Overview.txt",
           icon: `${BASE}images/txt.png`,
           kind: "file",
           fileType: "txt",
-          position: "top-5 left-10",
           description: [
-            "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
-            "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
-            "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
-            "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+            "A secure blog platform with authentication, image uploads, and date-based search.",
+            "Built using Flask, SQLAlchemy, Flask-Login, Flask-WTF, and Jinja2.",
+            "Focuses on backend security, session management, and optimized DB queries.",
           ],
         },
         {
           id: 2,
-          name: "food-delivery-app.com",
+          name: "GitHub Repo",
+          icon: `${BASE}images/GitHub-Logo.wine.svg`,
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/GAGGZ1/Flask-Blog/",
+          position: "top-40 right-100",
+        },
+      ],
+    },
+    // ▶ 4. AI Note-Taking Assistant
+    {
+      id: "4",
+      name: "AI Note-Taking App",
+      icon: `${BASE}images/folder.png`,
+      kind: "folder",
+      windowPosition: "top-[30vh] left-1",
+      children: [
+        {
+          id: 1,
+          name: "Overview.txt",
+          icon: `${BASE}images/txt.png`,
+          kind: "file",
+          fileType: "txt",
+          description: [
+            "An AI-powered note-taking app with autocomplete and smart suggestions.",
+            "Built using Next.js 13, TypeScript, OpenAI API, Drizzle ORM, and Tailwind CSS.",
+            "Demonstrates AI integration with modern frontend architecture.",
+          ],
+        },
+        {
+          id: 2,
+          name: "GitHub Repo",
+          icon: `${BASE}images/GitHub-Logo.wine.svg`,
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/GAGGZ1/AI-Note-Taking-Assistant",
+          position: "top-52 right-60",
+        },
+        {
+          id: 3,
+          name: "Live Demo",
           icon: `${BASE}images/safari.png`,
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
-          position: "top-10 right-20",
-        },
-        {
-          id: 4,
-          name: "food-delivery-app.png",
-          icon: `${BASE}images/image.png`,
-          kind: "file",
-          fileType: "img",
-          position: "top-52 right-80",
-          imageUrl: `${BASE}images/project-3.png`,
-        },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: `${BASE}images/plain.png`,
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-          position: "top-60 right-20",
+          href: "https://ai-note-taking-assistant-two.vercel.app/",
+          position: "top-45 right-10",
         },
       ],
     },
@@ -430,13 +498,13 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "txt",
       position: "top-60 left-5",
-      subtitle: "Meet the Developer Behind the Code",
-      image: `${BASE}images/adrian.jpg`,
+      subtitle: "Hey! I’m Gagan Chauhan 👋",
+      image: `${BASE}images/profile.jpeg`,
       description: [
-        "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
-        "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
-        "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
-        "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
+        "I’m a final-year Computer Science student with a deep interest in solving engineering problems and building systems that scale. My core strength lies in Data Structures & Algorithms using Java, backed by strong problem-solving fundamentals.",
+        "I’ve built multiple full-stack applications using the MERN stack (MongoDB, Express.js, React.js, Node.js), and I also work with Python + Flask to design clean APIs and connect robust databases.",
+        "I strongly believe self-discipline fuels growth. Lately, I’ve been exploring AI, Machine Learning, and Deep Learning aiming to blend solid engineering with intelligent systems.",
+        "I enjoy building things, breaking them, learning from failures, and improving every iteration. Always curious. Always shipping.",
       ],
     },
   ],
@@ -489,6 +557,7 @@ const TRASH_LOCATION = {
 
 export const locations = {
   work: WORK_LOCATION,
+  projects: PROJECTS,
   about: ABOUT_LOCATION,
   resume: RESUME_LOCATION,
   trash: TRASH_LOCATION,

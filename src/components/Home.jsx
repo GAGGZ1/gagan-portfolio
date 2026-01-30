@@ -5,7 +5,7 @@ import { Draggable } from "gsap/draggable";
 import useWindowStore from "#store/window";
 import useLocationStore from "#store/location";
 
-const projects = locations.work?.children ?? [];
+const projects = locations.projects?.children ?? [];
 
 const Home = () => {
   const { setActiveLocation } = useLocationStore();
@@ -26,11 +26,11 @@ const Home = () => {
             className={clsx("group folder", project.windowPosition)}
             onClick={() => handleOpenProjectFinder(project)}
           >
-         <img
+            <img
               src={`${import.meta.env.BASE_URL}images/folder.png`}
               alt={project.name}
             />
-            <p>{project.name}</p>
+            <p>{project.name} </p>
           </li>
         ))}
       </ul>

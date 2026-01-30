@@ -5,12 +5,12 @@ import { Search } from "lucide-react";
 import clsx from "clsx";
 import { locations } from "#constants";
 import useWindowStore from "#store/window";
+import WorkExperienceViewer from "#components/WorkExperienceViewer";
 
 const Finder = () => {
   const { openWindow } = useWindowStore();
   const { activeLocation, setActiveLocation } = useLocationStore();
   const openItem = (item) => {
-  
     if (item.fileType === "pdf") return openWindow("resume");
     if (item.kind === "folder") return setActiveLocation(item);
     if (["fig", "url"].includes(item.fileType) && item.href)
@@ -32,7 +32,9 @@ const Finder = () => {
             )}
           >
             <img src={item.icon} className="w-4" alt={item.name || "folder"} />
-            <p className="text-sm font-medium truncate">{item.name}</p>
+            <p className="text-sm font-medium truncate whitespace-normal ">
+              {item.name}
+            </p>
           </li>
         ))}
       </ul>
@@ -48,21 +50,32 @@ const Finder = () => {
 
       <div className="bg-white flex h-full">
         <div className="sidebar">
-          {renderList("Favorites", Object.values(locations))}
-          {renderList("My Projects", locations.work.children)}
+          {renderList("Favorites", [
+            locations.work,
+            locations.about,
+            locations.resume,
+            locations.trash,
+          ])}
+          {renderList("My Projects", locations.projects.children)}
         </div>
-        <ul className="content">
-          {activeLocation?.children.map((item) => (
-            <li
-              key={item.id}
-              className={item.position}
-              onClick={() => openItem(item)}
-            >
-              <img src={item.icon} alt={item.name} />
-              <p>{item.name}</p>
-            </li>
-          ))}
-        </ul>
+        <div className="flex-1">
+          {activeLocation?.type === "work" ? (
+            <WorkExperienceViewer />
+          ) : (
+            <ul className="content">
+              {activeLocation?.children.map((item) => (
+                <li
+                  key={item.id}
+                  className={item.position}
+                  onClick={() => openItem(item)}
+                >
+                  <img src={item.icon} alt={item.name} />
+                  <p>{item.name}</p>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
       </div>
     </div>
   );

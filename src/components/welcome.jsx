@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import ShinyText from "./ShinyText";
 
 const renderText = (text, className, baseWeight = 400) =>
   [...text].map((char, i) => (
@@ -83,6 +84,17 @@ const Welcome = () => {
       <h1 ref={titleRef} className="mt-7">
         {renderText("Portfolio", "text-9xl italic font-georama")}
       </h1>
+      <br></br>
+      <div>
+        <ShinyText
+          text="✨ I’m a software engineer."
+          speed={2.5}
+          color="#b5b5b5"
+          shineColor="#ffffff"
+          spread={120}
+          direction="left"
+        />
+      </div>
 
       <div className="small-screen">
         <p>This Portfolio is designed for desktop/tablet screens only.</p>
