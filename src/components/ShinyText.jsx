@@ -112,7 +112,7 @@ const ShinyText = ({
 
   return (
     <motion.span
-      className={`shiny-text ${className} font-roboto text-3xl text-gray-900`}
+      className={`shiny-text ${className} font-roboto text-3xl text-gray-900 md:text-center`}
       style={{ ...gradientStyle, backgroundPosition }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}

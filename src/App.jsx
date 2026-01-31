@@ -1,6 +1,13 @@
 import BootScreen from "./BootScreen";
 import LockScreen from "./LockScreen";
-import { Navbar, Welcome, Dock, ClickSpark, Terminal } from "#components";
+import {
+  Navbar,
+  Welcome,
+  Dock,
+  ClickSpark,
+  Terminal,
+  ScreenBlocker,
+} from "#components";
 import gsap from "gsap";
 import { Draggable } from "gsap/draggable";
 import useSystemStore from "#store/system";
@@ -13,7 +20,7 @@ import {
   ImageWindow,
   ContactWindow,
   Home,
-  PhotosWindow
+  PhotosWindow,
 } from "#windows/Index";
 
 gsap.registerPlugin(Draggable);
@@ -39,6 +46,7 @@ function App() {
 
   return (
     <main>
+      <ScreenBlocker />
       <ClickSpark
         sparkSize={16}
         sparkRadius={45}

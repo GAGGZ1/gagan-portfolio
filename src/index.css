@@ -532,3 +532,26 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.screen-blocker {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .screen-blocker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    background: #000;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+  }
+}
